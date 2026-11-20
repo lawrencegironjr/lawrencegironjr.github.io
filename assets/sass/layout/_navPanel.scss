@@ -96,6 +96,27 @@
 			}
 		}
 
+		.actions {
+			@include vendor('flex-direction', 'column');
+			margin-left: 0;
+			width: 100%;
+
+			li {
+				padding: 0.75rem 0 0 0;
+				width: 100%;
+
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+
+			.button {
+				overflow-wrap: anywhere;
+				white-space: normal;
+				width: 100%;
+			}
+		}
+
 		.close {
 			@include icon(false, solid);
 			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
