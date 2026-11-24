@@ -40,13 +40,44 @@
 					> h1, h2 {
 						font-size: 4rem;
 						line-height: 1.1;
-						margin: 0 0 _size(element-margin) 0;
+						margin: 0 0 1rem 0;
 					}
 				}
 			}
 
 			&.featured {
 				text-align: center;
+			}
+
+			&.overview {
+				header.major {
+					margin-bottom: 0.75rem;
+
+					> .date {
+						margin-bottom: 1.25rem;
+					}
+
+					> p {
+						line-height: 1.6;
+						margin-bottom: 0.75rem;
+					}
+				}
+
+				ul.actions.overview-actions {
+					@include vendor('align-items', 'center');
+					@include vendor('flex-direction', 'column');
+					margin-left: 0;
+					width: 100%;
+
+					li {
+						padding: 0.75rem 0 0 0;
+						width: 50%;
+
+						&:first-child {
+							padding-top: 0;
+						}
+					}
+				}
 			}
 
 			@include breakpoint('<=large') {
@@ -60,13 +91,13 @@
 					&.major {
 						> .date {
 							margin-top: -1rem;
-							margin-bottom: _size(element-margin);
+							margin-bottom: 1rem;
 						}
 
 						> h1, h2 {
 							font-size: 2.5rem;
 							line-height: 1.2;
-							margin: 0 0 (_size(element-margin) * 0.75) 0;
+							margin: 0 0 1rem 0;
 						}
 					}
 				}
