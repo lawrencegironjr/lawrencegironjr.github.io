@@ -112,32 +112,10 @@
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
-			var scrollPositionKey = 'nav-scroll:' + window.location.pathname,
-				scrollPosition = sessionStorage.getItem(scrollPositionKey);
-
-			if (scrollPosition !== null) {
-				sessionStorage.removeItem(scrollPositionKey);
-				window.scrollTo(0, parseInt(scrollPosition, 10));
-			}
-
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
-	$(document).on('click', '#nav a, #navPanel a', function(event) {
-		if (event.which !== 1
-		||	event.metaKey
-		||	event.ctrlKey
-		||	event.shiftKey
-		||	event.altKey
-		||	this.target
-		||	this.host !== window.location.host
-		||	this.pathname === window.location.pathname)
-			return;
-
-		sessionStorage.setItem('nav-scroll:' + this.pathname, window.pageYOffset);
-	});
 
 	// Scrolly.
 		$('.scrolly').scrolly();
