@@ -122,6 +122,14 @@
 				border-top-width: 2px;
 				text-align: center;
 
+				p {
+					text-align: left;
+				}
+
+				&.template-card {
+					min-height: 24rem;
+				}
+
 				> :last-child {
 					margin-bottom: 0;
 				}
@@ -152,6 +160,10 @@
 				));
 
 				> article {
+					&.template-card {
+						min-height: 16rem;
+					}
+
 					&:nth-child(2n - 1) {
 						border-left-width: 2px;
 					}

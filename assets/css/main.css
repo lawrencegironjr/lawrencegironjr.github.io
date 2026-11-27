@@ -3904,6 +3904,14 @@ input, select, textarea {
 				text-align: center;
 			}
 
+				#main > .posts > article p {
+					text-align: left;
+				}
+
+				#main > .posts > article.template-card {
+					min-height: 24rem;
+				}
+
 				#main > .posts > article > :last-child {
 					margin-bottom: 0;
 				}
@@ -3950,6 +3958,10 @@ input, select, textarea {
 
 				#main > .posts > article:nth-child(n) {
 					border-left-width: 0;
+				}
+
+				#main > .posts > article.template-card {
+					min-height: 16rem;
 				}
 
 				#main > .posts > article:nth-child(-n + 1) {
