@@ -3778,6 +3778,82 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		#main > .education-sections .education-dropdown {
+			border: solid 2px #eeeeee;
+			margin-bottom: 1.5rem;
+			text-align: left;
+		}
+
+			#main > .education-sections .education-dropdown summary {
+				align-items: center;
+				background-color: #1e252d;
+				color: #ffffff;
+				cursor: pointer;
+				display: flex;
+				font-family: "Source Sans Pro", Helvetica, sans-serif;
+				font-weight: 900;
+				justify-content: space-between;
+				letter-spacing: 0.075em;
+				list-style: none;
+				padding: 1rem 1.5rem;
+				text-transform: uppercase;
+				transition: background-color 0.2s ease-in-out;
+			}
+
+				#main > .education-sections .education-dropdown summary:hover {
+					background-color: #18bfef;
+				}
+
+				#main > .education-sections .education-dropdown summary::-webkit-details-marker {
+					display: none;
+				}
+
+				#main > .education-sections .education-dropdown summary:after {
+					content: '+';
+					font-size: 1.5rem;
+					margin-left: 1rem;
+				}
+
+			#main > .education-sections .education-dropdown[open] > summary:after {
+				content: '-';
+			}
+
+		#main > .education-sections .education-dropdown-content {
+			padding: 1.5rem;
+		}
+
+		#main > .education-sections .education-post {
+			border-top: solid 2px #eeeeee;
+			margin: 1.5rem auto 0;
+			max-width: 32rem;
+			padding-top: 1.5rem;
+			text-align: center;
+		}
+
+			#main > .education-sections .education-post .image.fit {
+				margin: 1.5rem auto;
+				max-width: 22rem;
+			}
+
+			#main > .education-sections .education-post > .date {
+				display: block;
+				font-size: 0.8rem;
+				margin: 0 0 1rem 0;
+				position: relative;
+			}
+
+			#main > .education-sections .education-post p {
+				text-align: left;
+			}
+
+		@media screen and (max-width: 736px) {
+
+			#main > .education-sections .education-dropdown-content {
+				padding: 1rem;
+			}
+
+		}
+
 		#main > .post {
 			padding: 8rem 8rem 6rem 8rem ;
 		}

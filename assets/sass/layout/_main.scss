@@ -28,6 +28,82 @@
 			text-align: center;
 		}
 
+		> .education-sections {
+			.education-dropdown {
+				border: solid 2px _palette(border);
+				margin-bottom: 1.5rem;
+				text-align: left;
+
+				summary {
+					align-items: center;
+					background-color: _palette(invert, bg);
+					color: _palette(invert, fg-bold);
+					cursor: pointer;
+					display: flex;
+					font-family: _font(family-heading);
+					font-weight: _font(weight-heading);
+					justify-content: space-between;
+					letter-spacing: 0.075em;
+					list-style: none;
+					padding: 1rem 1.5rem;
+					text-transform: uppercase;
+					transition: background-color 0.2s ease-in-out;
+
+					&:hover {
+						background-color: _palette(invert, accent);
+					}
+
+					&::-webkit-details-marker {
+						display: none;
+					}
+
+					&:after {
+						content: '+';
+						font-size: 1.5rem;
+						margin-left: 1rem;
+					}
+				}
+
+				&[open] > summary:after {
+					content: '-';
+				}
+			}
+
+			.education-dropdown-content {
+				padding: 1.5rem;
+			}
+
+			.education-post {
+				border-top: solid 2px _palette(border);
+				margin: 1.5rem auto 0;
+				max-width: 32rem;
+				padding-top: 1.5rem;
+				text-align: center;
+
+				.image.fit {
+					margin: 1.5rem auto;
+					max-width: 22rem;
+				}
+
+				> .date {
+					display: block;
+					font-size: 0.8rem;
+					margin: 0 0 1rem 0;
+					position: relative;
+				}
+
+				p {
+					text-align: left;
+				}
+			}
+
+			@include breakpoint('<=small') {
+				.education-dropdown-content {
+					padding: 1rem;
+				}
+			}
+		}
+
 		> .post {
 			@include padding((_size(padding) * 4), (_size(padding) * 4));
 
